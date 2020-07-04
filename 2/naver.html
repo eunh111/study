@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>naver</title>
+	<style>
+		*{margin: 0; padding: 0;}
+		ul{list-style: none;}
+		a{color:#000; text-decoration: none;}
+		fieldset{border:0;}
+		legend{position: absolute; top: -9999px; right: -9999px;}
+		
+		.header .header_top{width: 1130px; height: 160px; margin: auto; position: relative;}
+
+		.header .header_top .quick_nav{position: absolute; top: 0; right: 0;}
+
+		.header .gnb{box-shadow: 0 1px 3px 0 rgba(0,0,0,.12); border-top: 1px solid #e4e8eb;}
+		.header .gnb ul{width: 1130px; margin: auto; overflow: hidden; }
+		.header .gnb ul li{float:left; height: 52px; font-size:15px; font-weight: 700; margin-right: 18px; line-height: 52px;}
+		.header .gnb ul li.on a{color:#03c75a;}
+
+
+		.container{width: 1130px; margin: 20px auto 0; overflow: hidden;}
+		.left_area{width: 750px; float:left;}
+		.left_area .banner01 img{width: 100%; vertical-align: top;}
+		.left_area .news_head{height:49px; border: 1px solid #dae1e6; background: #f7f9fa; margin: 12px 0; }
+
+
+		.right_area{width: 350px; float:right;}
+		.right_area .login_area{height: 135px; border: 1px solid #dae1e6; background: #f7f9fa;}
+
+		.right_area .issue_wrap{margin: 12px 0; height: 49px; border: 1px solid #dae1e6; }
+		.right_area .banner02 img{width: 100%;}
+		.right_area .shop_area{}
+
+	</style>
+</head>
+<body>
+	<header>
+		<div class="header">
+			<div class="header_top">
+				<h1><a href="">네이버</a></h1>
+				<form action="" method="get">
+					<fieldset>
+						<legend>검색</legend>
+						<input type="text">
+						<button type="button"><span>검색</span></button>
+					</fieldset>
+				</form>
+				<ul class="quick_nav">
+					<li><a href="">네이버를 시작페이지로</a></li>
+					<li><a href="">주니어네이버</a></li>
+					<li><a href="">해피빈</a></li>
+				</ul>
+			</div>
+			<div class="gnb">
+				<ul>
+					<li class="on"><a href="">메일</a></li>
+					<li><a href="">카페</a></li>
+					<li><a href="">블로그</a></li>
+					<li><a href="">지식인</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="container">
+			<div class="left_area">
+				<div class="banner01">
+					<img src="banner01.png" alt="">
+				</div>
+				<div class="news_head">
+				</div>
+				<div class="news_stand">
+					<div class="stand_head"></div>
+					<div class="stand_list"></div>
+				</div>
+			</div>
+			<div class="right_area">
+				<div class="login_area"></div>
+				<div class="issue_wrap"></div>
+				<div class="banner02">
+					<img src="banner02.png" alt="">
+				</div>
+				<div class="shop_area"></div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="footer">
+			
+		</div>
+	</footer>
+</body>
+</html>
