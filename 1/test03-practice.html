@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<style>
+		*{margin: 0; padding: 0;}
+		body{font-size: 16px;}
+	    h1,h3{font-size:16px;}
+	    ul{list-style:none;}
+	    a{text-decoration: none; color:#000;}		
+		
+		/*header*/
+		.header{background: #ccc; height: 150px; margin-bottom: 10px;
+			position: relative; overflow: hidden;
+		}
+
+		.header h1{width: 100px; height: 50px; background: #ffff;
+			position: absolute; left: 50%; margin-left: -50px; top: 50%; margin-top: -25px;
+			text-align: center; line-height: 50px;
+		}
+
+		.sns_list{float:left;}
+		.sns_list ul{overflow: hidden; padding: 10px;}
+		.sns_list li{float:left; padding-right: 10px;}
+
+		.user_nav{float: right; padding: 10px;}
+		.user_nav li{float:left; padding-left: 10px;}
+		
+		/*main*/
+		.main_vis{height: 300px; background: #ccc; position: relative;}
+		.main_vis .prev{width: 50px; height: 50px; background: #ffff;
+		position: absolute; top: 50%; margin-top: -25px; left: 10px;
+		}
+		.main_vis .next{width: 50px; height: 50px; background: #ffff;
+		position: absolute; top: 50%; margin-top: -25px; right:10px;
+		}
+		.paging{position: absolute; bottom: 0; text-align: center; width: 100%;}
+		.paging ul{overflow: hidden; display: inline-block;}
+		.paging li{float: left; width: 20px; height: 20px; background: #fff;
+			border-radius: 50%; margin: 0 3px; text-indent: -9999px;}
+		
+		.notice_wrap{padding:50px 0; text-align: center;}
+		.notice_wrap h3{font-size:20px; text-align: center; margin-bottom: 30px;}
+		.notice_wrap ul{overflow: hidden; display: inline-block;}
+		.notice_wrap li{float:left; width: 150px; background: #f00; box-sizing: border-box;
+			padding: 10px; margin: 0 3px;}
+		.notice_wrap li img{width: 100%;}
+		.notice_wrap li p{background: #fff;}
+
+		.board_wrap{background:#ccc; padding:50px 0; margin-bottom: 10px;}
+		.board_wrap ul{width: 800px; margin: 0 auto;}
+		.board_wrap li{height: 50px; background: #fff; margin-bottom: 10px;}
+		.board_wrap li:last-child{margin-bottom: 0;}
+
+        .footer{background: #000; height: 100px;}
+
+	</style>
+</head>
+<body>
+	<header>
+		<div class="header">
+			<h1><a href="">네이버</a></h1>
+			<div class="sns_list">
+				<ul>
+					<li><a href="">페북</a></li>
+		            <li><a href="">인스타</a></li>
+		            <li><a href="">트위터</a></li>
+				</ul>
+			</div>
+			<div class="user_nav">
+				<ul>
+		            <li><a href="">로그인</a></li>
+		            <li><a href="">회원가입</a></li>
+		            <li><a href="">마이페이지</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<div class="container">
+			<div class="main_vis">
+				<div class="prev">이전</div>
+				<div class="next">다음</div>
+				<div class="paging">
+					<ul>
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+					</ul>
+				</div>				
+			</div>
+			<div class="notice_wrap">
+				<h3>공지사항</h3>
+				<ul>
+					<li>
+						<img src="download.jpg" alt="">
+						<p>dddd</p>
+					</li>
+					<li>
+						<img src="download.jpg" alt="">
+						<p>dddd</p>
+					</li>
+					<li>
+						<img src="download.jpg" alt="">
+						<p>dddd</p>
+					</li>
+					<li>
+						<img src="download.jpg" alt="">
+						<p>dddd</p>
+					</li>
+				</ul>
+			</div>
+			<div class="board_wrap">
+				<ul>
+	              <li>1</li>
+	              <li>2</li>
+	              <li>3</li>
+	              <li>4</li>
+	            </ul>
+			</div>
+		</div>  <!-- container end -->
+	</main>
+
+	<footer>
+		<div class="footer">
+			footer
+		</div>
+	</footer>
+</body>
+</html>
