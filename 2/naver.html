@@ -1,99 +1,311 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<meta charset="UTF-8">
-	<title>naver</title>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
-	<style>
-		* {padding: 0;  margin: 0;}
-  		body {font-family: 'Noto Sans KR', sans-serif;font-size: 14px;line-height: 1.2;letter-spacing: -0.5px; }
-		ul{list-style: none;}
-		a{color:#000; text-decoration: none;}
-		fieldset{border:0;}
-		legend{position: absolute; top: -9999px; right: -9999px;}
-		
-		.header .header_top{width: 1130px; height: 160px; margin: auto; position: relative;}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>naver</title>
+    <link rel="stylesheet" href="css/all.css">
+    <style>
+	  *{margin: 0;padding: 0;}
+	  ul{list-style:none}
+	  a{color: #000;text-decoration: none;}
+	  fieldset{border:0;}
+	  button {border:0;}
+	  legend{position: absolute;top: -9999px;left: -9999px;}
 
-		.header .header_top .quick_nav{position: absolute; top: 0; right: 0;}
+	  .header .head_top{width: 1130px;margin: auto;height: 160px;
+	  	position: relative; overflow: hidden;
+	  }
+	  .header .head_top h1{margin-top: 48px;}
+	  .header .head_top h1 a{text-indent: -9999px;}  
+	  /*글자 없어지는거 어떻게 하는지*/
+	
+	  .search fieldset{overflow: hidden;}
+	  .search input{
+	  	position: absolute; top: 50%; left: 50%;
+	  	transform: translate(-50%,-50%);
+	  	width: 586px; height: 57px; border: 2px solid #19ce60;	  	
+	  }
+	  .search button{width: 57px; height: 57px; background: #19ce60;
+	  	float:right;
+	  }
+	  /*버튼 fr하고 fieldset에 oh 했는데 안되는이유*/
 
-		.header .gnb{box-shadow: 0 1px 3px 0 rgba(0,0,0,.12); border-top: 1px solid #e4e8eb;}
-		.header .gnb ul{width: 1130px; margin: auto; overflow: hidden; }
-		.header .gnb ul li{float:left; height: 52px; font-size:15px; font-weight: 700; margin-right: 18px; line-height: 52px;}
-		.header .gnb ul li.on a{color:#03c75a;}
+	  .quick_nav{position: absolute; top: 10px;right: 0;}
+	  .quick_nav li{float:left; font-size: 11px; margin-right: 20px;}
+	  .quick_nav li:last-child{margin-right: 0;}
 
 
-		.container{width: 1130px; margin: 20px auto 0; overflow: hidden;}
-		.left_area{width: 750px; float:left;}
-		.left_area .banner01 img{width: 100%; vertical-align: top;}
-		.left_area .news_head{height:49px; border: 1px solid #dae1e6; background: #f7f9fa; margin: 12px 0; }
+	  .gnb{box-shadow: 0 1px 3px 0 rgba(0,0,0,.12);border-top: 1px solid #e4e8eb;}
+	  .gnb ul{width: 1130px;margin: auto;overflow: hidden;}
+	  .gnb li{float: left;height: 52px;
+	    line-height: 52px;font-size:15px;font-weight: 700;margin-right: 18px;}
+	  .gnb li.on a{color: #03c75a;}
+    </style>
 
+        <!-- box-shadow: 0 1px 3px 0 rgba(0,0,0,.12); -->
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="head_top">
+          <h1><a href=""><img src="img/logo.jpg" alt="">네이버</a></h1>
 
-		.right_area{width: 350px; float:right;}
-		.right_area .login_area{height: 135px; border: 1px solid #dae1e6; background: #f7f9fa;}
+          <form class="search" action="index.html" method="get">
+            <fieldset>
+              <legend>검색</legend>
+              <input type="text">
+              <button type="button" name="button"><span>검색</span></button>
+            </fieldset>
+          </form>
 
-		.right_area .issue_wrap{margin: 12px 0; height: 49px; border: 1px solid #dae1e6; }
-		.right_area .banner02 img{width: 100%;}
-		.right_area .shop_area{}
+          <ul class="quick_nav">
+            <li><a href="">네이버를 시작페이지로</a></li>
+            <li><a href="">쥬니어네이버</a></li>
+            <li><a href="">해피빈</a></li>
+          </ul>
 
-	</style>
-</head>
-<body>
-	<header>
-		<div class="header">
-			<div class="header_top">
-				<h1><a href="">네이버</a></h1>
-				<form action="" method="get">
-					<fieldset>
-						<legend>검색</legend>
-						<input type="text">
-						<button type="button"><span>검색</span></button>
-					</fieldset>
-				</form>
-				<ul class="quick_nav">
-					<li><a href="">네이버를 시작페이지로</a></li>
-					<li><a href="">주니어네이버</a></li>
-					<li><a href="">해피빈</a></li>
-				</ul>
+        </div>
+        <div class="gnb">
+          <ul>
+            <li class="on"><a href="">메일</a></li>
+            <li><a href="">카페</a></li>
+            <li><a href="">블로그</a></li>
+            <li><a href="">지식인</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <style>
+    .container{width: 1130px;margin:20px auto 0;}
+    .left_area{width: 750px;float: left;}
+    .left_area .banner01 img{width: 100%;vertical-align: top;}
+    /*뉴스 한줄짜리부분*/
+    .news_head{height: 49px; border: 1px solid #dae1e6;
+      background: #f7f9fa; margin: 12px 0; overflow: hidden;
+      padding:0 20px;
+  	}
+	.news_head .left{float:left;}
+	.news_head .left p{float:left; font-size: 13px;line-height: 49px; 
+		margin-right: 10px;
+	}
+	.news_head .left p:first-child{font-weight: bold;}
+	.news_head .left p:last-child{color:#808080;}
+
+	.news_head .right{float:right;}
+	.news_head .right li{float:left; font-size: 13px; line-height: 49px;
+		margin-left: 10px; font-weight: bold;}
+	.news_head .right li:first-child a{color:#3e63be;}
+	
+	/*스탠드제목 글자부분*/
+	.stand_head{overflow: hidden; margin: 18px 0;}
+	.stand_head .left{float:left; font-size: 14px; overflow: hidden;}
+	.stand_head .left>a{float:left; font-weight: bold; margin-right: 10px;}
+	.stand_head .left ul{overflow: hidden;}
+	.stand_head .left li{float:left; margin-right: 10px;}
+	
+	.stand_head .right{float:right;}
+	.stand_head .right li{float:left; margin-left: 10px; }
+	.stand_head .right li i{color:#8f9194;}
+	.stand_head .right li.on i{color:#3e63be;}
+	/*언론사 테이블부분*/
+	.stand_list table{width: 750px; height: 262px;
+		border: 1px solid #dae1e6; border-collapse:collapse;
+	}
+	.stand_list table td{width:16.67%; height: 25%; border: 1px solid #dae1e6;
+		position: relative;
+	}
+	.stand_list table td img{position: absolute; top: 50%; left: 50%;
+		transform: translate(-50%,-50%);
+	}
+    </style>
+    <main>
+      <div class="container">
+        <div class="left_area">
+          <div class="banner01">
+            <img src="img/banner01.png" alt="">
+          </div>
+          <div class="news_head">
+			<div class="left">
+				<a href="#">
+					<p>연합뉴스 ></p>
+					<p>북미정상회담 '여지' 남긴 김여정…김정은과 역할분담...</p>
+				</a>
 			</div>
-			<div class="gnb">
+			<div class="right">
 				<ul>
-					<li class="on"><a href="">메일</a></li>
-					<li><a href="">카페</a></li>
-					<li><a href="">블로그</a></li>
-					<li><a href="">지식인</a></li>
+					<li><a href="#">네이버뉴스</a></li>
+					<li><a href="#">연예</a></li>
+					<li><a href="#">스포츠</a></li>
+					<li><a href="#">경제</a></li>
 				</ul>
 			</div>
-		</div>
-	</header>
-	<main>
-		<div class="container">
-			<div class="left_area">
-				<div class="banner01">
-					<img src="img/banner01.png" alt="">
+          </div>
+          <div class="news_stand">
+            <div class="stand_head">
+				<div class="left">
+					<a href="#">뉴스스탠드 ></a>
+					<ul>
+						<li><a href="#">구독한 언론사</a></li>
+						<li><a href="#">전체언론사</a></li>
+					</ul>
 				</div>
-				<div class="news_head">
+				<div class="right">
+					<ul>
+						<li><a href="#"><i class="fas fa-list"></i></a></li>
+						<li class="on"><a href="#"><i class="fas fa-th-large"></i></a></li>
+						<li><a href="#"><i class="fas fa-cog"></i></a></li>
+					</ul>
+				</div>
+            </div>
+            <div class="stand_list">
+            	<table>
+            		<tr>
+            			<td><img src="img/mbc.png" alt=""></td>
+            			<td><img src="img/mbc.png" alt=""></td>
+            			<td><img src="img/mbc.png" alt=""></td>
+            			<td><img src="img/mbc.png" alt=""></td>
+            			<td><img src="img/mbc.png" alt=""></td>
+            			<td><img src="img/mbc.png" alt=""></td>
+            		</tr>
+            		<tr>
+            			<td><img src="img/mbc.png" alt=""></td>
+            			<td><img src="img/mbc.png" alt=""></td>
+            			<td><img src="img/mbc.png" alt=""></td>
+            			<td><img src="img/mbc.png" alt=""></td>
+            			<td><img src="img/mbc.png" alt=""></td>
+            			<td><img src="img/mbc.png" alt=""></td>
+            		</tr>
+            		<tr>
+            			<td><img src="img/mbc.png" alt=""></td>
+            			<td><img src="img/mbc.png" alt=""></td>
+            			<td><img src="img/mbc.png" alt=""></td>
+            			<td><img src="img/mbc.png" alt=""></td>
+            			<td><img src="img/mbc.png" alt=""></td>
+            			<td><img src="img/mbc.png" alt=""></td>
+            		</tr>
+            		<tr>
+            			<td><img src="img/mbc.png" alt=""></td>
+            			<td><img src="img/mbc.png" alt=""></td>
+            			<td><img src="img/mbc.png" alt=""></td>
+            			<td><img src="img/mbc.png" alt=""></td>
+            			<td><img src="img/mbc.png" alt=""></td>
+            			<td><img src="img/mbc.png" alt=""></td>
+            		</tr>
+            	</table>
 
-				</div>
-				<div class="news_stand">
-					<div class="stand_head"></div>
-					<div class="stand_list"></div>
-				</div>
-			</div>
-			<div class="right_area">
-				<div class="login_area"></div>
-				<div class="issue_wrap"></div>
-				<div class="banner02">
-					<img src="img/banner02.png" alt="">
-				</div>
-				<div class="shop_area"></div>
-			</div>
-		</div>
-	</main>
-	<footer>
-		<div class="footer">
-			
-		</div>
-	</footer>
-</body>
+            </div>
+          </div>
+        </div>   <!-- left_area END -->
+	<style>
+    .right_area{width: 350px;float: right;}
+    .right_area .login_area{
+      height: 103px;
+      border: 1px solid #dae1e6;
+      background: #f7f9fa;
+      padding:15px 20px;
+    }
+    .login_area p{color:#808080; font-size: 12px;}
+    
+   	.login_area button{width: 310px; height: 48px; background: #19ce60; color:#fff; border:none; margin:10px 0;
+   	}
+	.login_area .member{font-size: 12px; overflow: hidden;}
+	.login_area .join{float:right;}
+
+    .issu_wrap{margin: 12px 0;height: 49px;border: 1px solid #dae1e6;
+    	padding:14px 20px; overflow: hidden;
+	}
+	/*높이값 빼도 되는건지..*/
+
+	.issu_wrap .issue{width: 37px;height: 20px;border: 1px solid #000;
+		border-radius: 10px; margin-right: 5px; font-size: 13px;
+		text-align: center; line-height: 20px;
+		float:left;
+	}
+	.issu_wrap p{font-size: 13px; color:#404040; float:left;
+	}
+	.issu_wrap .paging{float:right; overflow: hidden;}
+	.issu_wrap .paging li{
+		width: 22px; height: 22px; background: #fff;
+		border: 1px solid #e4e8eb; float:left; text-align: center;
+	}
+	.issu_wrap .paging li:first-child{margin-right: -1px;}
+
+
+    .banner02 img{width: 100%;vertical-align: top; border: 1px solid #dae1e6;}
+	</style>
+        <div class="right_area">
+          <div class="login_area">
+          	<p>네이버를 더 안전하고 편리하게 이용하세요</p>
+          	<button>로그인</button>
+          	<div class="member">
+          		<a href="#">아이디</a>
+          		<a href="#">비밀번호찾기</a>
+          		<a href="#" class="join">회원가입</a>
+          	</div>
+          </div>
+          <div class="issu_wrap">
+          	<div class="issue">이슈</div>
+          	<a href="#"><p>코로나바이러스감염증19 현황</p></a>
+          	<ul class="paging">
+          		<li class="prev"><a href="#"><</a></li>
+          		<li class="next"><a href="#">></a></li>
+          	</ul>
+          </div>
+          <div class="banner02">
+            <img src="img/banner02.jpg" alt="">
+          </div>
+          <div class="shop_area">
+          	<div class="title">
+          		<h3>쇼핑</h3>
+          		<ul>
+          			<li><a href="#">상품</a></li>
+          			<li><a href="#">쇼핑몰</a></li>
+          			<li><a href="#">MEN</a></li>
+          		</ul>
+          	</div>
+          	<div class="product">
+          		<div class="mall">
+          			<ul>
+          				<li><a href="#">G마켓</a></li>
+          				<li><a href="#">G마켓</a></li>
+          				<li><a href="#">G마켓</a></li>
+          				<li><a href="#">G마켓</a></li>
+          				<li><a href="#">G마켓</a></li>
+          				<li><a href="#">G마켓</a></li>
+          				<li><a href="#">G마켓</a></li>
+          				<li><a href="#">G마켓</a></li>
+          				<li><a href="#">G마켓</a></li>
+          				<li><a href="#">G마켓</a></li>
+          				<li><a href="#">G마켓</a></li>
+          				<li><a href="#">G마켓</a></li>
+          			</ul>
+          		</div>
+          		<div class="gallery">
+          			<ul>
+          				<li><a href="#"></a></li>
+          				<li><a href="#"></a></li>
+          				<li><a href="#"></a></li>
+          				<li><a href="#"></a></li>
+          				<li><a href="#"></a></li>
+          				<li><a href="#"></a></li>
+          				<li><a href="#"></a></li>
+          				<li><a href="#"></a></li>
+          				<li><a href="#"></a></li>
+          				<li><a href="#"></a></li>
+          				<li><a href="#"></a></li>
+          				<li><a href="#"></a></li>
+          			</ul>
+          		</div>
+          	</div>
+          </div>
+        </div>  <!-- right_area  END -->
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer">
+
+      </div>
+    </footer>
+  </body>
 </html>
