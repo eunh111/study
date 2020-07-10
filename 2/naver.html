@@ -5,29 +5,42 @@
     <title>naver</title>
     <link rel="stylesheet" href="css/all.css">
     <style>
-	  *{margin: 0;padding: 0;}
+	  *{margin: 0;padding: 0; box-sizing: border-box;}
 	  ul{list-style:none}
 	  a{color: #000;text-decoration: none;}
 	  fieldset{border:0;}
 	  button {border:0;}
 	  legend{position: absolute;top: -9999px;left: -9999px;}
+    h1,h2,h3{font-size:12px;}
 
 	  .header .head_top{width: 1130px;margin: auto;height: 160px;
 	  	position: relative; overflow: hidden;
 	  }
-	  .header .head_top h1{margin-top: 48px;}
-	  .header .head_top h1 a{text-indent: -9999px;}  
-	  /*글자 없어지는거 어떻게 하는지*/
+	  .header .head_top h1{width: 221px; height: 52px; 
+      position: absolute; top: 50%; margin-top: -26px; text-indent: -9999px; 
+      background: url(img/logo.jpg) no-repeat;
+    }
+	  .header .head_top h1 a{display: block; height: 52px;}
 	
-	  .search fieldset{overflow: hidden;}
+	  .search{position: absolute; top: 50%; margin-top: -28.5px; left: 286px;
+    }
 	  .search input{
-	  	position: absolute; top: 50%; left: 50%;
-	  	transform: translate(-50%,-50%);
-	  	width: 586px; height: 57px; border: 2px solid #19ce60;	  	
+	  	width: 470px; height: 57px; border: 2px solid #19ce60;	  	
+      float:left;
+      font-size: 18px; font-weight: 700; line-height: 24px; padding:13px;
+      outline:none;
 	  }
 	  .search button{width: 57px; height: 57px; background: #19ce60;
-	  	float:right;
+      float:left; outline:none;
 	  }
+    .search button span{display: block; 
+      width: 22px; height: 22px;
+      margin: 0 auto; text-indent: -9999px;
+      background: url(img/bg01.png) no-repeat;
+      background-size: 471px 442px;
+      background-position: -429px -172px;
+    }
+
 	  /*버튼 fr하고 fieldset에 oh 했는데 안되는이유*/
 
 	  .quick_nav{position: absolute; top: 10px;right: 0;}
@@ -48,7 +61,7 @@
     <header>
       <div class="header">
         <div class="head_top">
-          <h1><a href=""><img src="img/logo.jpg" alt="">네이버</a></h1>
+          <h1><a href="">네이버</a></h1>
 
           <form class="search" action="index.html" method="get">
             <fieldset>
@@ -104,11 +117,34 @@
 	.stand_head .left li{float:left; margin-right: 10px;}
 	
 	.stand_head .right{float:right;}
-	.stand_head .right li{float:left; margin-left: 10px; }
+	.stand_head .right li{float:left; margin-left: 10px; text-indent: -9999px;}
 	.stand_head .right li i{color:#8f9194;}
 	.stand_head .right li.on i{color:#3e63be;}
+
+  .stand_head .right li:nth-child(1){
+    background: url(img/bg01.png) no-repeat;
+    background-size: 471px 442px;
+    background-position: -96px -427px;
+    width: 14px; height: 13px; 
+  }
+  .stand_head .right li:nth-child(2){
+    background: url(img/bg01.png) no-repeat;
+    background-size: 471px 442px;
+    background-position: -458px -62px;
+    width: 13px; height: 13px;
+
+  }
+
+  .stand_head .right li:nth-child(3){
+    background: url(img/bg01.png) no-repeat;
+    background-size: 471px 442px;
+    background-position: 0 -427px;
+    width: 15px; height: 15px;
+  }
+
+
 	/*언론사 테이블부분*/
-	.stand_list table{width: 750px; height: 262px;
+/*	.stand_list table{width: 750px; height: 262px;
 		border: 1px solid #dae1e6; border-collapse:collapse;
 	}
 	.stand_list table td{width:16.67%; height: 25%; border: 1px solid #dae1e6;
@@ -116,7 +152,7 @@
 	}
 	.stand_list table td img{position: absolute; top: 50%; left: 50%;
 		transform: translate(-50%,-50%);
-	}
+	}*/
     </style>
     <main>
       <div class="container">
@@ -142,64 +178,324 @@
           </div>
           <div class="news_stand">
             <div class="stand_head">
-				<div class="left">
-					<a href="#">뉴스스탠드 ></a>
-					<ul>
-						<li><a href="#">구독한 언론사</a></li>
-						<li><a href="#">전체언론사</a></li>
-					</ul>
-				</div>
-				<div class="right">
-					<ul>
-						<li><a href="#"><i class="fas fa-list"></i></a></li>
-						<li class="on"><a href="#"><i class="fas fa-th-large"></i></a></li>
-						<li><a href="#"><i class="fas fa-cog"></i></a></li>
-					</ul>
-				</div>
+      				<div class="left">
+      					<a href="#">뉴스스탠드 ></a>
+      					<ul>
+      						<li><a href="#">구독한 언론사</a></li>
+      						<li><a href="#">전체언론사</a></li>
+      					</ul>
+      				</div>
+      				<div class="right">
+      					<ul>
+      						<li><a href="#">목록형</a></li>
+      						<li class="on"><a href="#">갤러리형</a></li>
+      						<li><a href="#">설정</a></li>
+      					</ul>
+      				</div>
             </div>
+
+
+            <style>
+              .stand_list{border: 1px solid #e4e8eb; overflow: hidden; position: relative;}
+              .stand_list li{float:left; width: 16.66%; height: 65px;
+                text-align: center; 
+              }
+              .stand_list li img{height: 20px;}
+              .stand_list li a{display: block; padding:23px 0 22px;}
+              .stand_list .vt_bar{width: 1px; height: 100%; position: absolute; top: 0; left: 0; background: #e4e8eb;}
+              .stand_list .vt_bar.vt01{left: 125px;}
+              .stand_list .vt_bar.vt02{left: 248px;}
+              .stand_list .vt_bar.vt03{left: 372px;}
+              .stand_list .vt_bar.vt04{left: 497px;}
+              .stand_list .vt_bar.vt05{left: 622px;}
+
+
+              .stand_list .hr_bar{width: 100%; height: 1px; position: absolute; top: 0; left: 0; background: #e4e8eb;}
+              .stand_list .hr_bar.hr01{top: 65px;}
+              .stand_list .hr_bar.hr02{top: 130px;}
+              .stand_list .hr_bar.hr03{top: 195px;}
+
+
+
+
+            </style>
             <div class="stand_list">
-            	<table>
-            		<tr>
-            			<td><img src="img/mbc.png" alt=""></td>
-            			<td><img src="img/mbc.png" alt=""></td>
-            			<td><img src="img/mbc.png" alt=""></td>
-            			<td><img src="img/mbc.png" alt=""></td>
-            			<td><img src="img/mbc.png" alt=""></td>
-            			<td><img src="img/mbc.png" alt=""></td>
-            		</tr>
-            		<tr>
-            			<td><img src="img/mbc.png" alt=""></td>
-            			<td><img src="img/mbc.png" alt=""></td>
-            			<td><img src="img/mbc.png" alt=""></td>
-            			<td><img src="img/mbc.png" alt=""></td>
-            			<td><img src="img/mbc.png" alt=""></td>
-            			<td><img src="img/mbc.png" alt=""></td>
-            		</tr>
-            		<tr>
-            			<td><img src="img/mbc.png" alt=""></td>
-            			<td><img src="img/mbc.png" alt=""></td>
-            			<td><img src="img/mbc.png" alt=""></td>
-            			<td><img src="img/mbc.png" alt=""></td>
-            			<td><img src="img/mbc.png" alt=""></td>
-            			<td><img src="img/mbc.png" alt=""></td>
-            		</tr>
-            		<tr>
-            			<td><img src="img/mbc.png" alt=""></td>
-            			<td><img src="img/mbc.png" alt=""></td>
-            			<td><img src="img/mbc.png" alt=""></td>
-            			<td><img src="img/mbc.png" alt=""></td>
-            			<td><img src="img/mbc.png" alt=""></td>
-            			<td><img src="img/mbc.png" alt=""></td>
-            		</tr>
-            	</table>
+              <ul>
+                <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/015.png" alt=""></a></li>
+                <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/015.png" alt=""></a></li>
+                <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/015.png" alt=""></a></li>
+                <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/015.png" alt=""></a></li>
+                <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/015.png" alt=""></a></li>
+                <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/015.png" alt=""></a></li>
+                <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/015.png" alt=""></a></li>
+                <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/015.png" alt=""></a></li>
+                <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/015.png" alt=""></a></li>
+                <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/015.png" alt=""></a></li>
+                <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/015.png" alt=""></a></li>
+                <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/015.png" alt=""></a></li>
+                <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/015.png" alt=""></a></li>
+                <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/015.png" alt=""></a></li>
+                <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/015.png" alt=""></a></li>
+                <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/015.png" alt=""></a></li>
+                <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/015.png" alt=""></a></li>
+                <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/015.png" alt=""></a></li>
+                <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/015.png" alt=""></a></li>
+                <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/015.png" alt=""></a></li>
+                <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/015.png" alt=""></a></li>
+                <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/015.png" alt=""></a></li>
+              </ul>
+              <i class="vt_bar vt01"></i>
+              <i class="vt_bar vt02"></i>
+              <i class="vt_bar vt03"></i>
+              <i class="vt_bar vt04"></i>
+              <i class="vt_bar vt05"></i>
+
+              <i class="hr_bar hr01"></i>
+              <i class="hr_bar hr02"></i>
+              <i class="hr_bar hr03"></i>
 
             </div>
           </div>
+
+          <style>
+            .today{padding-top:35px;}
+            .today_head{overflow: hidden; padding-bottom:17px;}
+            .today_head h4{float:left;}
+            .today_head h4 span{font-size: 12px; font-weight: normal;}
+
+            .today_head ul{float:right; font-size: 12px;}
+            .today_head li{float:left;}
+            .today_head li em{font-weight: bold; font-style:normal;}
+            .today_head li:first-child:after{content:""; display: inline-block; width: 1px; height: 10px; 
+            background: #ccc; margin:0 10px;}
+
+            .today_nav{border: 1px solid #dae1e6;}
+            .today_nav ul{overflow: hidden;}
+            .today_nav li{float:left; width: 12.5%; height: 50px; text-align: center;
+              line-height: 50px; border-right: 1px solid #dae1e6; 
+            }
+            .today_nav li:last-child{border-right: 0;}
+            .today_nav li a{font-size:14px; font-weight: 700;}
+            .today_nav li.on {background: #f00; color:#fff;}
+            .today_nav li.on a{color:#fff;}
+
+          </style>
+          <div class="today">
+            <div class="today_head">
+              <h4>오늘 읽을만한 글 <span>주제별로 분류된 다양한 글 모음</span></h4>
+              <ul>
+                <li><em>2,148</em> 개의 글</li>
+                <li>관심주제 설정</li>
+              </ul>
+            </div>
+
+            <div class="today_nav">
+              <ul>
+                <li class="on"><a href="#">엔터</a></li>
+                <li><a href="#">엔터</a></li>
+                <li><a href="#">엔터</a></li>
+                <li><a href="#">엔터</a></li>
+                <li><a href="#">엔터</a></li>
+                <li><a href="#">엔터</a></li>
+                <li><a href="#">엔터</a></li>
+                <li><a href="#">엔터</a></li>
+              </ul>
+            </div>
+
+
+            <style>
+              .lay01{overflow: hidden; padding: 22px 0;}
+              .lay01 .list{width: 50%; float:left; padding-right:11px;}
+              .lay01 .list:last-child{padding-right: 0; padding-left: 11px;}
+              .lay01 .list .img_warp{height: 180px; overflow: hidden;}
+              .lay01 .list img{transition: all 0.5s ease;}
+              .lay01 .list .img_warp:hover img{transform: scale(1.1);}
+              .lay01 .list .cate{color:#e77c43; font-weight: 700; font-size:12px; 
+                padding-top: 16px; display: block;}
+              .lay01 .list .tit{font-weight: 700; font-size:12px; display: block; padding-top:6px;}
+              .lay01 .list .desc{font-size: 13px; line-height: 21px; margin-top: 6px;}
+              .lay01 .list .hash{color:#505050; font-size:11px; margin-top: 6px;}
+
+            </style>
+
+            <div class="lay01">
+
+              <div class="list">
+                <div class="img_warp">
+                  <img src="img/food01.jpg" alt="">
+                </div>
+                <span class="cate">[푸드클래스] 꽁블 선생님의 지구촌 집밥</span>
+                <strong class="tit">맛 보면 엄지척! 라구 소스 스파게티</strong>
+                <p class="desc">
+                가지와 모짜렐라 치즈를 넣어 더 맛있게!<br>
+                간단하지만 맛있는 파스타 만들기
+                </p>
+                <div class="hash">#간단레시피 #라구파스타</div>
+              </div>
+
+              <div class="list">
+                <div class="img_warp">
+                  <img src="img/food01.jpg" alt="">
+                </div>
+                <span class="cate">[푸드클래스] 꽁블 선생님의 지구촌 집밥</span>
+                <strong class="tit">맛 보면 엄지척! 라구 소스 스파게티</strong>
+                <p class="desc">
+                가지와 모짜렐라 치즈를 넣어 더 맛있게!<br>
+                간단하지만 맛있는 파스타 만들기
+                </p>
+                <div class="hash">#간단레시피 #라구파스타</div>
+              </div>
+
+            </div>
+
+            <style>
+              .lay02{border-top: 1px solid #e4e8eb; padding-top:18px;}
+              .lay02 ul{}
+              .lay02 ul li{margin-bottom: 18px; height: 114px; position: relative; padding-left:190px;}
+              .lay02 .img_wrap{width: 170px; height: 124px; overflow: hidden; position: absolute; top: 0; left: 0;}
+              .lay02 img{width: 100%; transition: all 0.5s ease;}
+              .lay02 .img_wrap:hover img{transform: scale(1.1);}
+              .lay02 .cate{color:#e77c43; font-size:12px; display: block; font-weight: 700;}
+              .lay02 .title{font-weight: 700; font-size:12px; display: block; padding-top:6px;}
+              .lay02 .desc{font-size: 13px; margin-top: 6px;
+              text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
+
+              /* 여러 줄 자르기 추가 스타일 */ white-space: normal;
+               line-height: 21px; 
+               height: 42px; 
+               text-align: left;
+                word-wrap: break-word; 
+                display: -webkit-box; 
+                -webkit-line-clamp: 2; 
+                -webkit-box-orient: vertical;
+
+            }
+              .lay02 .info{color:#505050; font-size:11px; margin-top: 6px;}
+              .lay02 .name:after{content:""; width: 2px; height: 2px; background: #ccc; display: inline-block;
+              margin: 0 5px; vertical-align: 3px;
+            }
+
+            </style>
+
+            <div class="lay02">
+              <ul>
+                <li>
+                  <div class="img_wrap">
+                    <img src="img/food02.jpg" alt="">
+                  </div>
+                  <span class="cate">푸드</span>
+                  <strong class="title">주간밥상 정갈하고 건강하게 챙겨 먹는 기록</strong>
+                  <p class="desc">안녕하세요.한 주를 마무리하며 주간 밥상일기 정리해볼게요. ​오늘은 식비 먼저 정리해보고 시작할게요!주간 식비 - 가족 : 남편&아내 2인- 장보기 지출 : 58,560원 (◇주재료 구매 리스트 : 앞다리살 11,28 안녕하세요.한 주를 마무리하며 주간 밥상일기 정리해볼게요. ​오늘은 식비 먼저 정리해보고 시작할게요!주간 식비 - 가족 : 남편&아내 2인- 장보기 지출 : 58,560원 (◇주재료 구매 리스트 : 앞다리살 11,28</p>
+                  <div class="info">
+                    <span class="name">몽이</span>
+                    <span class="date">3주일 전</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="img_wrap">
+                    <img src="img/food02.jpg" alt="">
+                  </div>
+                  <span class="cate">푸드</span>
+                  <strong class="title">주간밥상 정갈하고 건강하게 챙겨 먹는 기록</strong>
+                  <p class="desc">안녕하세요.한 주를 마무리하며 주간 밥상일기 정리해볼게요. ​오늘은 식비 먼저 정리해보고 시작할게요!주간 식비 - 가족 : 남편&아내 2인- 장보기 지출 : 58,560원 (◇주재료 구매 리스트 : 앞다리살 11,28 안녕하세요.한 주를 마무리하며 주간 밥상일기 정리해볼게요. ​오늘은 식비 먼저 정리해보고 시작할게요!주간 식비 - 가족 : 남편&아내 2인- 장보기 지출 : 58,560원 (◇주재료 구매 리스트 : 앞다리살 11,28</p>
+                  <div class="info">
+                    <span class="name">몽이</span>
+                    <span class="date">3주일 전</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="img_wrap">
+                    <img src="img/food02.jpg" alt="">
+                  </div>
+                  <span class="cate">푸드</span>
+                  <strong class="title">주간밥상 정갈하고 건강하게 챙겨 먹는 기록</strong>
+                  <p class="desc">안녕하세요.한 주를 마무리하며 주간 밥상일기 정리해볼게요. ​오늘은 식비 먼저 정리해보고 시작할게요!주간 식비 - 가족 : 남편&아내 2인- 장보기 지출 : 58,560원 (◇주재료 구매 리스트 : 앞다리살 11,28 안녕하세요.한 주를 마무리하며 주간 밥상일기 정리해볼게요. ​오늘은 식비 먼저 정리해보고 시작할게요!주간 식비 - 가족 : 남편&아내 2인- 장보기 지출 : 58,560원 (◇주재료 구매 리스트 : 앞다리살 11,28</p>
+                  <div class="info">
+                    <span class="name">몽이</span>
+                    <span class="date">3주일 전</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="img_wrap">
+                    <img src="img/food02.jpg" alt="">
+                  </div>
+                  <span class="cate">푸드</span>
+                  <strong class="title">주간밥상 정갈하고 건강하게 챙겨 먹는 기록</strong>
+                  <p class="desc">안녕하세요.한 주를 마무리하며 주간 밥상일기 정리해볼게요. ​오늘은 식비 먼저 정리해보고 시작할게요!주간 식비 - 가족 : 남편&아내 2인- 장보기 지출 : 58,560원 (◇주재료 구매 리스트 : 앞다리살 11,28 안녕하세요.한 주를 마무리하며 주간 밥상일기 정리해볼게요. ​오늘은 식비 먼저 정리해보고 시작할게요!주간 식비 - 가족 : 남편&아내 2인- 장보기 지출 : 58,560원 (◇주재료 구매 리스트 : 앞다리살 11,28</p>
+                  <div class="info">
+                    <span class="name">몽이</span>
+                    <span class="date">3주일 전</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="img_wrap">
+                    <img src="img/food02.jpg" alt="">
+                  </div>
+                  <span class="cate">푸드</span>
+                  <strong class="title">주간밥상 정갈하고 건강하게 챙겨 먹는 기록</strong>
+                  <p class="desc">안녕하세요.한 주를 마무리하며 주간 밥상일기 정리해볼게요. ​오늘은 식비 먼저 정리해보고 시작할게요!주간 식비 - 가족 : 남편&아내 2인- 장보기 지출 : 58,560원 (◇주재료 구매 리스트 : 앞다리살 11,28 안녕하세요.한 주를 마무리하며 주간 밥상일기 정리해볼게요. ​오늘은 식비 먼저 정리해보고 시작할게요!주간 식비 - 가족 : 남편&아내 2인- 장보기 지출 : 58,560원 (◇주재료 구매 리스트 : 앞다리살 11,28</p>
+                  <div class="info">
+                    <span class="name">몽이</span>
+                    <span class="date">3주일 전</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <style>
+              .lay03 ul{overflow: hidden; border-top: 1px solid #000; border-bottom: 1px solid #000; padding:18px 0 17px;}
+              .lay03 li{width: 232px; float:left; margin-right: 27px;}
+              .lay03 li:last-child{margin-right: 0;}
+              .lay03 .img_wrap{height: 130px; overflow: hidden;}
+              .lay03 img{width: 100%; transition: all 0.5s ease;}
+              .lay03 .img_wrap:hover img{transform: scale(1.1);}
+            </style>
+            <div class="lay03">
+              <ul>
+                <li>
+                  <div class="img_wrap">
+                    <img src="img/food03.jpg" alt="">
+                  </div>
+                  <strong class="title">주간밥상 정갈하고 건강하게 챙겨 먹는 기록</strong>
+                  <div class="info">
+                    <span class="name">몽이</span>
+                    <span class="date">3주일 전</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="img_wrap">
+                    <img src="img/food03.jpg" alt="">
+                  </div>
+                  <strong class="title">주간밥상 정갈하고 건강하게 챙겨 먹는 기록</strong>
+                  <div class="info">
+                    <span class="name">몽이</span>
+                    <span class="date">3주일 전</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="img_wrap">
+                    <img src="img/food03.jpg" alt="">
+                  </div>
+                  <strong class="title">주간밥상 정갈하고 건강하게 챙겨 먹는 기록</strong>
+                  <div class="info">
+                    <span class="name">몽이</span>
+                    <span class="date">3주일 전</span>
+                  </div>
+                </li>
+
+              </ul>
+
+            </div>
+            <div class="lay02"></div>
+          </div>
+
+
+
         </div>   <!-- left_area END -->
 	<style>
     .right_area{width: 350px;float: right;}
     .right_area .login_area{
-      height: 103px;
+      height: 135px;
       border: 1px solid #dae1e6;
       background: #f7f9fa;
       padding:15px 20px;
@@ -221,7 +517,7 @@
 		text-align: center; line-height: 20px;
 		float:left;
 	}
-	.issu_wrap p{font-size: 13px; color:#404040; float:left;
+	.issu_wrap p{font-size: 13px; color:#404040; float:left; line-height: 20px;
 	}
 	.issu_wrap .paging{float:right; overflow: hidden;}
 	.issu_wrap .paging li{
