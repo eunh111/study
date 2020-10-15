@@ -191,12 +191,12 @@
 			<style>
 				.event_area{margin-top: 100px;}
 				.event_area ul:after{content:"";clear:both; display:block;}
-				.event_area li{width: 500px;float:left; margin-bottom: 50px;}
+				.event_area li{width: 500px;float:left;}
 				.event_area li:nth-child(2n){float:right;}
+				.event_area li:nth-child(1),
+				.event_area li:nth-child(2){margin-bottom: 50px;}
 				.event_area li span{display: block;}
-
 			</style>
-
 			<div class="event_area inner">
 				<ul>
 					<li>
@@ -229,10 +229,19 @@
 					</li>
 				</ul>
 			</div>
-			<div class="review_area ">
+
+			<style>
+				.review_area{}
+				.review_wrap h3{padding: 90px 0 70px; line-height: 1;text-align: center;font-size: 42px; color:#222; font-weight: normal;}
+				.review_wrap .con:after{content:"";clear:both;display: block;}
+				.review_wrap .text_wrap{width: 510px; padding-top:42px;}
+				.review_wrap .text_wrap p{font-size: 18px;letter-spacing: -0.25px;}
+				.review_wrap .more_btn{margin-top: 45px;}
+			</style>
+			<div class="review_area">
 				<div class="pager">
-					<div class="prev">p</div>
-					<div class="next">n</div>
+					<div class="prev"><img src="images/prev.jpg" alt="">p</div>
+					<div class="next"><img src="images/next.jpg" alt="">n</div> 
 				</div>
 				<div class="review_wrap inner">
 					<h3>best review</h3>
@@ -247,12 +256,121 @@
 						</div>
 					</div>
 				</div>
+				<div class="pagerdot">
+					<img src="" alt="">
+				</div>
 			</div>
-			<div class="board"></div>
+
+			<style>
+				.board{margin:30px 0 120px; height:307px;}
+				.board_con h4:after{
+					content: "";
+			        display: block;
+			        width: 510px;
+			        border-bottom: 2px solid #bcbcbc;
+			    }
+			    .board_con a{white-space: nowrap;
+			    	line-height: 60px;
+			    }
+			    .board_con a .date{color:#888;}
+			    .board_con li:after{
+			    	content: "";
+			        display: block;
+			        width: 510px;
+			        border-bottom: 1px solid #bcbcbc;
+			    }
+
+			</style>
+			<div class="board inner">
+				<div class="board_con left">
+					<h4>news<a href="#"><img src="images/more.png" alt="">더보기</a></h4>
+					<ul>
+						<li>
+							<a href="#">
+								<span class="date">2019. 01. 03</span>
+								좋은제품연구소 홈페이지 리뉴얼  안내
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="date">2019. 01. 03</span>
+								좋은제품연구소 홈페이지 리뉴얼  안내
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="date">2019. 01. 03</span>
+								좋은제품연구소 홈페이지 리뉴얼  안내
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="date">2019. 01. 03</span>
+								좋은제품연구소 홈페이지 리뉴얼  안내
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="board_con right">
+					<h4>download <a href="#"><img src="images/more.png" alt="">더보기</a></h4>
+					<ul>
+						<li>
+							<a href="#">
+								<span class="date">2019. 01. 03</span>
+								좋은제품연구소 홈페이지 리뉴얼  안내
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="date">2019. 01. 03</span>
+								좋은제품연구소 홈페이지 리뉴얼  안내
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="date">2019. 01. 03</span>
+								좋은제품연구소 홈페이지 리뉴얼  안내
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="date">2019. 01. 03</span>
+								좋은제품연구소 홈페이지 리뉴얼  안내
+							</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
 		</div>  <!-- main end -->
 	</main>
-
-
+	<style>
+		footer{background-color: #aaa; height: 260px;}
+		footer .cs{width: 300px;height: 165px;
+			border: 1px solid #fff;
+		}
+	</style>
+	<footer>
+		<div class="inner">
+			<div class="info left">
+				<h2><a href="#">g.g lab</a></h2>
+				<div class="addr">
+					<address class="">
+						㈜좋은제품연구소ㅣ 대표 : 박현주 ㅣ 주소 : 서울특별시 강서구 방화대로 21길 64 1층<br>
+						대표번호 : 070-7733-1029 ㅣ FAX : 031-312-8689 ㅣ kty@gglab.co.kr
+					</address>
+				</div>
+				<p class="copy">
+					Copyrights by ㈜좋은제품연구소. All rights reserved. Designed & Hosted by MODOOM.
+				</p>
+			</div>
+			<div class="cs right">
+				<strong>Customer Center</strong>
+				<p>09:00 ~ 18:00 (주말/공휴일 휴무)</p>
+				<a href="tel:070-7733-1029">070-7733-1029</a>
+			</div>
+		</div>
+	</footer>
 
 
 
