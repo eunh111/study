@@ -234,18 +234,21 @@
 				.review_area{}
 				.review_wrap h3{padding: 90px 0 70px; line-height: 1;text-align: center;font-size: 42px; color:#222; font-weight: normal;}
 				.review_wrap .con:after{content:"";clear:both;display: block;}
+				.review_wrap .con{position: relative;}
+				.review_wrap .con .prev{position: absolute; top: 50%;left: -50px;transform: translate(0,-50%);}
+				.review_wrap .con .next{position: absolute; top: 50%;right: -50px;transform: translate(0,-50%);}
 				.review_wrap .text_wrap{width: 510px; padding-top:42px;}
 				.review_wrap .text_wrap p{font-size: 18px;letter-spacing: -0.25px;}
 				.review_wrap .more_btn{margin-top: 45px;}
 			</style>
-			<div class="review_area">
-				<div class="pager">
-					<div class="prev"><img src="images/prev.jpg" alt="">p</div>
-					<div class="next"><img src="images/next.jpg" alt="">n</div> 
-				</div>
+			<div class="review_area">			
 				<div class="review_wrap inner">
 					<h3>best review</h3>
 					<div class="con">
+						<div class="pager">
+							<div class="prev"><img src="images/prev.jpg" alt="">p</div>
+							<div class="next"><img src="images/next.jpg" alt="">n</div> 
+						</div>
 						<div class="img_wrap left">
 							<img src="images/review.jpg" alt="">
 						</div>
@@ -262,7 +265,8 @@
 			</div>
 
 			<style>
-				.board{margin:30px 0 120px; height:307px;}
+				.board{margin:30px auto 120px; width: 1200px;}
+				.board:after{content:""; clear:both; display: block;}
 				.board_con h4:after{
 					content: "";
 			        display: block;
@@ -279,11 +283,13 @@
 			        width: 510px;
 			        border-bottom: 1px solid #bcbcbc;
 			    }
+			    .board_con h4:after{content:""; clear:both; display: block;}
+			    .board_con h4 a{float:right;}
 
 			</style>
 			<div class="board inner">
 				<div class="board_con left">
-					<h4>news<a href="#"><img src="images/more.png" alt="">더보기</a></h4>
+					<h4>news<a href="#"><img src="images/more.png" alt="더보기"></a></h4>
 					<ul>
 						<li>
 							<a href="#">
@@ -312,7 +318,7 @@
 					</ul>
 				</div>
 				<div class="board_con right">
-					<h4>download <a href="#"><img src="images/more.png" alt="">더보기</a></h4>
+					<h4>download <a href="#"><img src="images/more.png" alt="더보기"></a></h4>
 					<ul>
 						<li>
 							<a href="#">
