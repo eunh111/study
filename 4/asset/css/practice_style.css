@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
+
+body{font-family: 'Noto Sans KR', sans-serif; font-size: 14px;}
+
+/*common*/
+.clear:after{content:""; clear:both; display: block;}
+
+.tit{font-size: 40px; color:#c1a06a; text-align: center;position: relative;}
+.tit span{position: relative; z-index: 2;}
+.tit:after{font-family: 'Libre Baskerville', serif; position: absolute;
+	top: 50%;left: 50%;transform: translate(-50%,-50%);color:#7d7d7d;
+	margin-top: -20px;opacity:0.3;
+}
+
+/*header*/
+.header{height: 72px;background: #1b1b1b;}
+.header .inner{width: 1152px;margin: auto; position: relative;}
+.header h1{width: 124px;height: 25px;
+	background: url(../images/logo/logo.png) no-repeat;
+	text-indent: -9999px;
+	position:absolute; left: -9px;top: 25px;
+}
+.header h1 a{display: block;height: 25px;}
+
+.header .gnb{float:left; position: absolute; left: 50%; top: 50%;
+	transform: translate(-50%,-50%);}
+.header .gnb li{float:left;padding:0 24px; line-height: 72px;}
+.header .gnb a{color:#fff;}
+/* 카테고리 여백 넉넉하게 넣고싶은데 padding 24에서 숫자 늘리면 2줄로 바뀜*/
+
+.header .user_nav{float:right;}
+.header .user_nav li{float:left; line-height: 72px; margin-left: 22px;}
+.header .user_nav a{color:#b3b3b3;}
+
+.header .user_nav li:first-child:before{
+	content:""; width: 16px;height: 19px;
+	background: url(../images/icon/ic_user.png) no-repeat;
+	display: inline-block;
+	vertical-align: middle; margin-right: 3px;
+}
+.header .user_nav li:last-child:before{
+	content:""; width: 23px;height: 23px;
+	background: url(../images/icon/ic_cart.png) no-repeat;
+	display: inline-block;
+	vertical-align: middle; margin-right: 6px;
+}
+.header .user_nav li:last-child a{position: relative;}
+.header .user_nav li:last-child i{width: 18px;height: 18px;
+	border-radius: 50%;
+	display: block; position: absolute;top: 13px;left: -15px;
+	background: #cc012e;line-height: 18px;text-align: center;
+	color:#fff; font-size: 10px;
+}
+
+/*main_vis*/
+.main_vis{height: 100vh; background: url(../images/main_vis.jpg) no-repeat;}
+.main_vis .inner{}
+.main_vis img{display: block;  }
+.main_vis strong{font-size: 20px; color:#bdbcbc;}
+.main_vis p{color:#606060;}
+.main_vis a{width: 138px;height: 52px;
+	border: 2px solid #fff; display: block;
+	border-radius: 26px;
+	color:#fff; line-height: 52px; text-align: center; font-size: 18px;}
+
+/*contents_wrap*/
+.contents_wrap{background: #222;}
+.contents_wrap ul{width: 1152px; margin:auto;}
+.contents_wrap li{float:left; width: 370px; height: 230px; 
+	background: #282828; margin:104px 20px 104px 0;
+	position: relative; box-shadow: 2px 2px 8px 2px #000;
+}
+.contents_wrap li:last-child{margin-right: 0;}
+.contents_wrap a{position: absolute; right: 0; top:36px;}
+.contents_wrap em{width: 162px;height: 28px;
+	line-height: 28px; display: block; 
+	font-size: 18px; color:#222220;
+
+}
+.contents_wrap em:nth-child(1){background: #c1a06a;}
+.contents_wrap em:nth-child(2){background: #754c24;}
+.contents_wrap em:nth-child(3){background: #5a2b0c;}
+
+.contents_wrap strong{font-size: 22px; color:#e3e3e3;
+	display:block; margin:25px 0 15px;
+}
+.contents_wrap p{color:#8a8a8a;}
+
+.contents_wrap li:nth-child(1):before{
+	content:""; width: 217px;height: 232px;
+	background: url(../images/contents_01.png) no-repeat;
+	display: inline-block; margin-right: 3px;
+	position: absolute;top: -20px;left: -5px;
+}
+.contents_wrap li:nth-child(2):before{
+	content:""; width: 251px;height: 232px;
+	background: url(../images/contents_02.png) no-repeat;
+	display: inline-block; margin-right: 3px;
+	position: absolute;top: -20px;left: -23px;
+
+}
+.contents_wrap li:nth-child(3):before{
+	content:""; width: 196px;height: 232px;
+	background: url(../images/contents_03.png) no-repeat;
+	display: inline-block; margin-right: 3px;
+	position: absolute;top: -20px;left: 5px;
+}
+
+/*new_prd*/
+.new_prd{background: #101010; padding:200px 0 70px;}
+.new_prd .tit:after{content:"capsule machine";}
+.new_prd .con{width: 1076px; margin:auto;}
+.new_prd .img_wrap{float:left;}
+.new_prd .text_wrap{float:right; color:#fff;}
+
+
+
+
+
+
+
+
