@@ -1,0 +1,259 @@
+/* common */
+.clear:after{content:""; clear:both; display: block;}
+
+.header{
+	position: fixed;
+	top: 0;left: 0;
+	width: 100%;
+	background: #fff;
+	height: 67px;
+	padding:21px 15px 19px;
+	z-index: 2;
+}
+
+.header h1{
+	height: 21px;
+	width: 70px;
+	background: #f00;
+	float: left;
+
+}
+
+.header .inner{
+	float: right;
+}
+
+.header .inner a{
+	float: left;
+}
+
+.header .menu_btn span{
+	display:block;
+	width: 32px;
+	height: 2px;
+	background: #000;
+}
+
+.header .menu_btn span:first-child{
+	margin-bottom: 8px;
+	margin-top: 4px;
+}
+
+.header .cart{
+	display: block;
+	width: 22px;
+	height: 22px;
+	background: #000;
+	border-radius: 50%;
+	color:#fff;
+	font-size: 12px;
+	line-height: 24px;
+	text-align: center;
+	margin-right: 10px;
+}
+
+.gnb{
+	background: #000;
+	position: fixed;
+	top: 0;right: -100%;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	padding:21px 15px 19px;
+}
+
+.gnb a{
+	color:#fff;
+}
+
+.gnb .nav{
+	padding-top:100px;
+}
+.gnb .nav a{
+	font-size: 35px;
+	font-weight: 500;
+}
+
+.gnb .gnb_foot{
+	position: absolute;
+	bottom: 0; left: 0;
+	padding:21px 15px 19px;
+}
+
+/*container*/
+.main_vis{
+	height: 100vh;
+	background: #f00;
+	padding-top:67px;
+	color:#fff;
+}
+
+.main_vis .slide01{
+	background: url(https://m.laka.co.kr/laka_skin/images/mo/about_visual.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+
+}
+.main_vis .slide02{
+	background: url(https://m.laka.co.kr/laka_skin/images/mo/about_visual.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.main_vis .slide03{
+	background: url(https://m.laka.co.kr/laka_skin/images/mo/about_visual.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+.swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+}
+
+.prd_intro01 {
+	position: relative;
+
+}
+
+.prd_intro01 .bg{
+	padding-bottom:100%;
+	background: #f00;
+}
+
+.prd_intro01.bg01 .bg{
+	background: url(https://m.laka.co.kr/laka_skin/images/mo/img_main_thumb_01_01_wbs_m.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.prd_intro01 .bg02 .bg{}
+.prd_intro01 .bg03 .bg{}
+
+.prd_intro01 ul li{
+	float: left;
+	width: 33.33%;
+	background-color: #ccc;
+	padding:20px 0;
+	text-align: center;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.prd_intro01 ul li.on{
+	background: #f00;
+	color:#fff;
+
+}
+
+
+
+.prd_intro01 .txt_wrap01{
+	position: absolute;
+	top: 0;left: 0;
+	padding:20px;
+}
+
+.txt_wrap01 em{
+	display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1;
+    color: #867b71;
+    text-shadow: 0 0 5vw rgba(0,0,0,0.5);
+}
+
+.txt_wrap01 strong{
+	display: block;
+	font-size: 17px;
+	margin-bottom: 10px;
+	text-shadow: 0 0 5vw rgba(0,0,0,0.5);
+	color:#fff;
+}
+.txt_wrap01 p{
+	font-size: 12px;
+	text-shadow: 0 0 5vw rgba(0,0,0,0.5);
+	color:#fff;
+}
+
+
+/*prd_intro02*/
+.prd_intro02{
+
+}
+.prd_intro02 .txt_wrap01 {padding:20px;}
+.prd_intro02 .txt_wrap01 em{
+	text-shadow: none;
+	color:#f00;
+
+}
+.prd_intro02 .txt_wrap01 strong{
+	text-shadow: none;
+	color:#000;
+	
+}
+
+.prd_intro02 ul li {position: relative;
+	margin-bottom: 15px;
+}
+
+.prd_intro02 ul li img{
+	vertical-align: top;
+	width: 100%;
+}
+
+
+.prd_intro02 ul li .txt_wrap02{
+	position: absolute;
+	bottom: 0; left: 0;
+	color:#fff;
+	text-align: center;
+	width: 100%;
+}
+.prd_intro02 ul li .txt_wrap02 p{
+	margin:10px 0 20px;
+}
+
+
+.bg_sec{background: #2a2a3e;
+position: relative;
+overflow: hidden;}
+.bg_sec .bg_01{
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(0%);
+    transition: transform 2s;
+}
+.bg_sec.on .bg_01 {
+    transform: translateY(-100%);
+    transition: transform 1s cubic-bezier(0,1,1,1);
+}
+
+
+.video_wrap{position: relative;
+	z-index: 2;
+}
+
+
+
